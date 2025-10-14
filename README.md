@@ -58,11 +58,20 @@ This framework demonstrates:
 ### Installation
 1. Clone the repository
 2. Create virtual environment:
-
+```
     python -m venv venv
-    source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+3. Activate the virtual environment
+Mac/Linux:
+```
+    source venv/bin/activate
+```
+Windows: 
+```
+venv\Scripts\activate
+```
 
-3. Install dependencies:
+4. Install dependencies:
 ```
     pip install -r requirements.txt
 ```

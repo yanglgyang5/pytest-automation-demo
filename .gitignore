@@ -2,3 +2,8 @@
 .env
 allure-results/
 allure-report/
+
+venv/
+.venv/
+.pytest_cache/
+reports/

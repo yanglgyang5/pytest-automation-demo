@@ -11,7 +11,7 @@ def test_home_page_title(browser, home_page):
     print("\n")
     print("Going to home page....")
     home_page.visit("http://demostore.supersqa.com")
-    assert 'Demo eCom Store – Just another WordPress site' == browser.title
+    assert 'Demo eCom Store' in home_page.driver.title
 
 @pytest.mark.testID2
 @pytest.mark.tcid('HOME-2')

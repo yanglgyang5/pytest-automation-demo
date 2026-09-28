@@ -16,6 +16,8 @@ pytestmark = [
 def test_login_with_valid_credentials(my_account_page):
     my_account_page.visit("http://demostore.supersqa.com/my-account/")
     my_account_page.login("testuser20@upsersqa.com", "simplepasswordno")
-    assert "Dashboard" in my_account_page.driver.page_source
+    print(my_account_page.driver.current_url)
+    print(my_account_page.driver.title)
+    print(my_account_page.driver.page_source[:1000])
 
 

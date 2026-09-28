@@ -12,7 +12,10 @@ class Config:
 
     # Test Configuration
     BROWSER = os.getenv('BROWSER', 'chrome')
-    HEADLESS = os.getenv('HEADLESS', 'False').lower() == 'true'
+    # In CI (GitHub Actions sets CI=true) there is no display, so Chrome must
+    # run headless unless explicitly overridden via the HEADLESS env var.
+    _HEADLESS_DEFAULT = 'true' if os.getenv('CI') == 'true' else 'False'
+    HEADLESS = os.getenv('HEADLESS', _HEADLESS_DEFAULT).lower() == 'true'
     IMPLICIT_WAIT = int(os.getenv('IMPLICIT_WAIT', '10'))
     
     # Test Data

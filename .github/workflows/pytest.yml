@@ -26,6 +26,8 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
 
       - name: Install dependencies
         run: |
